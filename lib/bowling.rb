@@ -10,6 +10,6 @@ class BowlingGame
   end
 
   def score
-    @score
+    @rolls.reduce(:+)
   end
 end
