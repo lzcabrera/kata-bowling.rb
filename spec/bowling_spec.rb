@@ -36,4 +36,10 @@ describe BowlingGame do
     subject { game.score }
     it { is_expected.to eq 24 }
   end
+
+  describe 'a perfect game' do
+    before { 12.times { game.roll 10 } }
+    subject { game.score }
+    it { is_expected.to eq 300 }
+  end
 end
