@@ -12,4 +12,16 @@ describe BowlingGame do
     subject { game.score }
     it { is_expected.to eq 20 }
   end
+
+  describe 'one spare' do
+    before do
+      game.roll(5)
+      game.roll(5)
+      game.roll(3)
+      17.times { game.roll(0) }
+    end
+
+    subject { game.score }
+    it { is_expected.to eq 16 }
+  end
 end
