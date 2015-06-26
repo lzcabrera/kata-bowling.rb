@@ -3,6 +3,6 @@ class BowlingGame
   end
 
   def score
-    -1
+    0
   end
 end
